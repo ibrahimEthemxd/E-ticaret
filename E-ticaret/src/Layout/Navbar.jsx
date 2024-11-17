@@ -6,6 +6,7 @@ function Navbar() {
       <p>SelamSelam</p>
       <p>keyole</p>
       <p>hey</p>
+      <p>Ek1</p>
     </div>
   );
 }
