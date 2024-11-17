@@ -7,6 +7,7 @@ function Navbar() {
       <p>keyole</p>
       <p>hey</p>
       <p>Ek1</p>
+      <p>ek2</p>
     </div>
   );
 }
