@@ -42,7 +42,7 @@ const Footer = () => {
                 <div className="footer-contact-top">
                   <h3 className="contact-title">
                     Need help? <br />
-                    (+90) 123 456 78 90
+                    (+90) 530 220 6127
                   </h3>
                   <p className="contact-desc">
                     We are available 8:00am – 7:00pm
@@ -72,20 +72,19 @@ const Footer = () => {
               <div className="brand-info">
                 <div className="footer-logo">
                   <a href="index.html" className="logo">
-                    LOGO
+                    ETHOS
                   </a>
                 </div>
                 <div className="footer-desc">
                   <p>
                     {" "}
-                    Quis ipsum suspendisse ultrices gravida. Risus commodo
-                    viverra maecenas accumsan lacus vel facilisis in termapol.
+                    Ethos Sana Uygun, Sana Yakın.
                   </p>
                 </div>
                 <div className="footer-contact">
                   <p>
-                    <a href="tel:555 555 55 55">(+800) 1234 5678 90</a> –{" "}
-                    <a href="mailto:info@example.com">info@example.com</a>
+                    <a href="tel:555 555 55 55">(+90) 530 220 6127 </a> –{" "}
+                    <a href="mailto:info@example.com">ibrhm8581@gmail.com</a>
                   </p>
                 </div>
               </div>
@@ -177,8 +176,8 @@ const Footer = () => {
             <div className="footer-copyright">
               <div className="site-copyright">
                 <p>
-                  Copyright 2022 © E-Commerce Theme. All right reserved. Powered
-                  by Emin Basbayan.
+                  Copyright 2024 © E-Commerce Theme. All right reserved. Powered
+                  by İEÖ.
                 </p>
               </div>
               <a href="#">

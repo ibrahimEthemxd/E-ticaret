@@ -5,8 +5,7 @@ const Header = () => {
       <div className="global-notification">
         <div className="container">
           <p>
-            SUMMER SALE FOR ALL SWIM SUITS AND FREE EXPRESS INTERNATIONAL
-            DELIVERY - OFF 50%!
+            BU FIRSAT KAÇMAZ - YAZ ÜRÜNLERİNDE %40 İNDİRİM!
             <a href="shop.html"> SHOP NOW</a>
           </p>
         </div>
@@ -19,7 +18,7 @@ const Header = () => {
             </div>
             <div className="header-left">
               <a href="index.html" className="logo">
-                LOGO
+                ETHOS
               </a>
             </div>
             <div className="header-center" id="sidebar">
