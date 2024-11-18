@@ -1,11 +1,9 @@
 import React from "react";
-import Policy from "../Policy/Policy";
 import "./Footer.css";
 
 const Footer = () => {
   return (
     <React.Fragment>
-      <Policy />
       <footer className="footer">
         <div className="subscribe-row">
           <div className="container">
@@ -76,10 +74,7 @@ const Footer = () => {
                   </a>
                 </div>
                 <div className="footer-desc">
-                  <p>
-                    {" "}
-                    Ethos Sana Uygun, Sana Yakın.
-                  </p>
+                  <p> Ethos Sana Uygun, Sana Yakın.</p>
                 </div>
                 <div className="footer-contact">
                   <p>
