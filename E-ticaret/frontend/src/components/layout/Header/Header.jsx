@@ -6,7 +6,7 @@ const Header = () => {
         <div className="container">
           <p>
             BU FIRSAT KAÇMAZ - YAZ ÜRÜNLERİNDE %40 İNDİRİM!
-            <a href="shop.html"> SHOP NOW</a>
+            <a href="#"> SHOP NOW</a>
           </p>
         </div>
       </div>
@@ -98,9 +98,6 @@ const Header = () => {
                               <li>
                                 <a href="#">Hover Style 2</a>
                               </li>
-                              <li>
-                                <a href="#">Hover Style 3</a>
-                              </li>
                             </ul>
                           </div>
                           <div className="megamenu-products">
@@ -153,10 +150,10 @@ const Header = () => {
                             <img src="img/mega-menu.jpg" alt="" />
                           </a>
                           <h3 className="megamenu-single-title">
-                            JOIN THE LAYERING GANG
+                            ALIŞVERİŞİN TADINI ÇIKARIN
                           </h3>
                           <h4 className="megamenu-single-subtitle">
-                            Suspendisse faucibus nunc et pellentesque
+                            Hayalinizdeki ürünlere bir tıkla ulaşın!
                           </h4>
                           <a
                             href="#"

@@ -1,9 +1,11 @@
 import React from "react";
 import "./Footer.css";
+import Policy from "../Policy/Policy";
 
 const Footer = () => {
   return (
     <React.Fragment>
+      <Policy />
       <footer className="footer">
         <div className="subscribe-row">
           <div className="container">
