@@ -1,15 +1,20 @@
-import { createRoot } from "react-dom/client";
-import MainLayout from "./layouts/MainLayout";
-import App from "./App.jsx";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
+import { Layout } from "./layouts/Layout";
+import CartProvider from "./context/CartProvider";
+import App from "./App";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./index.css";
-import CartProvider from "./context/CardProvider.jsx";
+import ScrollToTop from "./components/ScrollToTop";
 
-createRoot(document.getElementById("root")).render(
-  <CartProvider>
-    <MainLayout>
-      <App />
-    </MainLayout>
-  </CartProvider>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <BrowserRouter>
+    <ScrollToTop />
+    <CartProvider>
+      <Layout>
+        <App />
+      </Layout>
+    </CartProvider>
+  </BrowserRouter>
 );
