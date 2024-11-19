@@ -1,4 +1,4 @@
-import Breadcrumb from "../Breadcrumb/breadcrumb";
+import Breadcrumb from "./Breadcrumb/breadcrumb";
 import "./ProductDetails.css";
 const ProductDetails = () => {
   return (
