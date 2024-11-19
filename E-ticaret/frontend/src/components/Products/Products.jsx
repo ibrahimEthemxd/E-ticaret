@@ -28,6 +28,8 @@ PrevBtn.propTypes = {
 
 const Products = () => {
   const [products] = useState(ProductsData);
+  const [cartItems, setCartItems] = useState([]);
+
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -54,6 +56,7 @@ const Products = () => {
   };
   return (
     <section className="products">
+      Cart Sayısı: {cartItems.length}
       <div className="container">
         <div className="section-title">
           <h2>Featured Products</h2>
@@ -62,7 +65,11 @@ const Products = () => {
         <div className="product-wrapper product-carousel">
           <Slider {...sliderSettings}>
             {products.map((product) => (
-              <ProductItem product={product} key={product.id} />
+              <ProductItem
+                productItem={product}
+                setCartItems={setCartItems}
+                key={product.id}
+              />
             ))}
           </Slider>
         </div>
