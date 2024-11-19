@@ -1,5 +1,5 @@
 import "./Header.css";
-const Header = () => {
+const Header = ({ setIsSearchShow }) => {
   return (
     <header>
       <div className="global-notification">
@@ -147,7 +147,7 @@ const Header = () => {
                         </div>
                         <div className="megamenu-single">
                           <a href="#">
-                            <img src="img/mega-menu.jpg" alt="" />
+                            <img src="img/logo/ethos_logo.png" alt="" />
                           </a>
                           <h3 className="megamenu-single-title">
                             ALIŞVERİŞİN TADINI ÇIKARIN
@@ -184,7 +184,10 @@ const Header = () => {
                 <a href="account.html" className="header-account">
                   <i className="bi bi-person"></i>
                 </a>
-                <button className="search-button">
+                <button
+                  className="search-button"
+                  onClick={() => setIsSearchShow(true)}
+                >
                   <i className="bi bi-search"></i>
                 </button>
                 <a href="#">
