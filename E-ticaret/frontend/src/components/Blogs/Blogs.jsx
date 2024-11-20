@@ -5,8 +5,8 @@ const Blogs = () => {
     <section className="blogs">
       <div className="container">
         <div className="section-title">
-          <h2>From Our Blog</h2>
-          <p>Summer Collection New Morden Design</p>
+          <h2>Blogumuzdan</h2>
+          <p>Sezonun en yeni trendlerini keşfedin, şıklığınızı tamamlayın!</p>
         </div>
         <ul className="blog-list">
           <BlogItem />

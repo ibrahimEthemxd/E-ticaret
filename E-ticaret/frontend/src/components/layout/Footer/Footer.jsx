@@ -14,25 +14,24 @@ const Footer = () => {
                 <div className="footer-subscribe">
                   <div className="footer-subscribe-top">
                     <h3 className="subscribe-title">
-                      Get our emails for info on new items, sales and more.
+                      Yeni ürünler, indirimler ve daha fazlası hakkında bilgi
+                      almak için e-postalarımızı alın.
                     </h3>
                     <p className="subscribe-desc">
-                      We`ll email you a voucher worth $10 off your first order
-                      over $50.
+                      İlk 1000₺ üzeri siparişinizde geçerli 150₺ indirim kuponu
+                      gönderelim.
                     </p>
                   </div>
                   <div className="footer-subscribe-bottom">
                     <form>
-                      <input
-                        type="text"
-                        placeholder="Enter your email address."
-                      />
-                      <button className="btn">Subscribe</button>
+                      <input type="text" placeholder="Email Adresini gir" />
+                      <button className="btn">ABONE OL</button>
                     </form>
                     <p className="privacy-text">
-                      By subscribing you agree to our{" "}
+                      Abone olarak{" "}
                       <a href="#">
-                        Terms & Conditions and Privacy & Cookies Policy.
+                        Şartlar & Koşullar ve Gizlilik & Çerez Politikasını
+                        kabul etmiş oluyorsunuz.
                       </a>
                     </p>
                   </div>
@@ -41,11 +40,11 @@ const Footer = () => {
               <div className="footer-contact-wrapper">
                 <div className="footer-contact-top">
                   <h3 className="contact-title">
-                    Need help? <br />
+                    Yardım için <br />
                     (+90) 530 220 6127
                   </h3>
                   <p className="contact-desc">
-                    We are available 8:00am – 7:00pm
+                    08:00 - 19:00 saatleri arasında hizmetinizdeyiz.
                   </p>
                 </div>
                 <div className="footer-contact-bottom">
@@ -58,8 +57,9 @@ const Footer = () => {
                     </a>
                   </div>
                   <p className="privacy-text">
-                    <strong>Shopping App:</strong> Try our View in Your Room
-                    feature, manage registries and save payment info.
+                    <strong>Alışveriş Uygulaması:</strong> Odanda Görüntüle
+                    özelliğimizi deneyin, kayıtları yönetin ve ödeme
+                    bilgilerinizi kaydedin.
                   </p>
                 </div>
               </div>
@@ -86,19 +86,19 @@ const Footer = () => {
                 </div>
               </div>
               <div className="widget-nav-menu">
-                <h4>Information</h4>
+                <h4>Bilgiler</h4>
                 <ul className="menu-list">
                   <li>
-                    <a href="#">About Us</a>
+                    <a href="#">Hakkımızda</a>
                   </li>
                   <li>
-                    <a href="#">Privacy Policy</a>
+                    <a href="#">Gizlilik Politikası</a>
                   </li>
                   <li>
-                    <a href="#">Returns Policy</a>
+                    <a href="#">İade Politikası</a>
                   </li>
                   <li>
-                    <a href="#">Shipping Policy</a>
+                    <a href="#">Teslimat Politikası</a>
                   </li>
                   <li>
                     <a href="#">Dropshipping</a>
@@ -106,62 +106,62 @@ const Footer = () => {
                 </ul>
               </div>
               <div className="widget-nav-menu">
-                <h4>Account</h4>
+                <h4>Hesap</h4>
                 <ul className="menu-list">
                   <li>
-                    <a href="#">Dashboard</a>
+                    <a href="#">Kontrol Paneli</a>
                   </li>
                   <li>
-                    <a href="#">My Orders</a>
+                    <a href="#">Siparişlerim</a>
                   </li>
                   <li>
-                    <a href="#">My Wishlist</a>
+                    <a href="#">Favorilerim</a>
                   </li>
                   <li>
-                    <a href="#">Account details</a>
+                    <a href="#">Hesap Bilgileri</a>
                   </li>
                   <li>
-                    <a href="#">Track My Orders</a>
+                    <a href="#">Sipariş Takibi</a>
                   </li>
                 </ul>
               </div>
               <div className="widget-nav-menu">
-                <h4>Shop</h4>
+                <h4>Alışveriş</h4>
                 <ul className="menu-list">
                   <li>
-                    <a href="#">Affiliate</a>
+                    <a href="#">En Güncel Ürünler</a>
                   </li>
                   <li>
-                    <a href="#">Bestsellers</a>
+                    <a href="#">En Çok Satanlar</a>
                   </li>
                   <li>
-                    <a href="#">Discount</a>
+                    <a href="#">İndirimler</a>
                   </li>
                   <li>
-                    <a href="#">Latest Products</a>
+                    <a href="#">Yeni Ürünler</a>
                   </li>
                   <li>
-                    <a href="#">Sale Products</a>
+                    <a href="#">İndirimli Ürünler</a>
                   </li>
                 </ul>
               </div>
               <div className="widget-nav-menu">
-                <h4>Categories</h4>
+                <h4>Kategoriler</h4>
                 <ul className="menu-list">
                   <li>
-                    <a href="#">Women</a>
+                    <a href="#">Kadın</a>
                   </li>
                   <li>
-                    <a href="#">Men</a>
+                    <a href="#">Erkek</a>
                   </li>
                   <li>
-                    <a href="#">Bags</a>
+                    <a href="#">Çantalar</a>
                   </li>
                   <li>
-                    <a href="#">Outerwear</a>
+                    <a href="#">Dış Giyim</a>
                   </li>
                   <li>
-                    <a href="#">Shoes</a>
+                    <a href="#">İç Giyim</a>
                   </li>
                 </ul>
               </div>
@@ -173,8 +173,8 @@ const Footer = () => {
             <div className="footer-copyright">
               <div className="site-copyright">
                 <p>
-                  Copyright 2024 © E-Commerce Theme. All right reserved. Powered
-                  by İEÖ.
+                  Telif Hakkı 2024 © E-Ticaret Teması. Tüm hakları saklıdır.
+                  Powered by İEÖ.
                 </p>
               </div>
               <a href="#">
@@ -183,13 +183,13 @@ const Footer = () => {
               <div className="footer-menu">
                 <ul className="footer-menu-list">
                   <li className="list-item">
-                    <a href="#">Privacy Policy</a>
+                    <a href="#">Gizlilik Politikası</a>
                   </li>
                   <li className="list-item">
-                    <a href="#">Terms and Conditions</a>
+                    <a href="#">Şartlar ve Koşullar</a>
                   </li>
                   <li className="list-item">
-                    <a href="#">Returns Policy</a>
+                    <a href="#">İade Politikası</a>
                   </li>
                 </ul>
               </div>

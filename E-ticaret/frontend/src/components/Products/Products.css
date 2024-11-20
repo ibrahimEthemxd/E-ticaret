@@ -9,5 +9,8 @@
     display: flex;
     gap: 20px;
   }
+  .section-title{
+    margin-bottom: 15px;
+  }
   /*! products end  */
   

@@ -5,8 +5,8 @@ const CampaignSingle = () => {
     <section className="campaign-single">
     <div className="container">
       <div className="campaign-wrapper">
-        <h2>New Season Sale</h2>
-        <strong>40% OFF</strong>
+        <h2>Yeni Sezon Satışı</h2>
+        <strong>30% İNDİRİM</strong>
         <span></span>
         <a href="#" className="btn btn-lg">
           SHOP NOW

@@ -2,10 +2,9 @@ import PropTypes from "prop-types";
 import "./Dialog.css";
 
 const Dialog = ({ isDialogShow, setIsDialogShow }) => {
-
   const handleCloseDialog = (event) => {
     const checked = event.target.checked;
-    localStorage.setItem("dialog", JSON.stringify(!checked))
+    localStorage.setItem("dialog", JSON.stringify(!checked));
   };
 
   return (
@@ -20,18 +19,19 @@ const Dialog = ({ isDialogShow, setIsDialogShow }) => {
         <div className="popup-wrapper">
           <div className="popup-content">
             <div className="popup-title">
-              <h3>NEWSLETTER</h3>
+              <h3>ÖZEL FIRSATLAR</h3>
             </div>
             <p className="popup-text">
-              Sign up to our newsletter and get exclusive deals you won find any
-              where else straight to your inbox!
+              Özel fırsatları kaçırmayın! Sadece size özel indirimler ve
+              kampanyalardan haberdar olmak için hemen e-posta adresinizle
+              kaydolun. Avantajlı alışverişin keyfini çıkarın!
             </p>
             <form className="popup-form">
-              <input type="text" placeholder="Enter Email Address Here" />
-              <button className="btn btn-primary">SUBSCRIBE</button>
+              <input type="text" placeholder="Email Adresini Gir" />
+              <button className="btn btn-primary">KAYIT OL</button>
               <label>
                 <input type="checkbox" onChange={handleCloseDialog} />
-                <span>Don`t show this popup again</span>
+                <span>Bu pencereyi bir daha gösterme</span>
               </label>
             </form>
           </div>

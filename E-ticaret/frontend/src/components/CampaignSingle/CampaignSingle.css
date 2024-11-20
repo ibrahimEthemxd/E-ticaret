@@ -41,4 +41,7 @@
     border-color: var(--primary-color);
     color: #fff;
   }
+  .campaign-single .campaign-wrapper > a > i{
+    margin-left: 5px;
+  }
   

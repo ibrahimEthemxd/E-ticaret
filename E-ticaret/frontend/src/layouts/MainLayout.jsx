@@ -6,7 +6,7 @@ import Proptypes from "prop-types";
 import { useState, useEffect } from "react";
 const MainLayout = ({ children }) => {
   const [isSearchShow, setIsSearchShow] = useState(false);
-  const [isDialogShow, setIsDialogShow] = useState(true);
+  const [isDialogShow, setIsDialogShow] = useState(false);
 
   useEffect(() => {
     const dialogStatus = localStorage.getItem("dialog")
@@ -15,7 +15,7 @@ const MainLayout = ({ children }) => {
 
     setTimeout(() => {
       setIsDialogShow(dialogStatus);
-    }, 15000);
+    }, 50000);
   }, []);
 
   return (

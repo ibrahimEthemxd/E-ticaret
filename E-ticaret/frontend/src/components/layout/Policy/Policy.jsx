@@ -8,29 +8,29 @@ const Policy = () => {
           <li className="policy-item">
             <i className="bi bi-truck"></i>
             <div className="policy-texts">
-              <strong>FREE DELIVERY</strong>
+              <strong>ÜCRETSİZ TESLİMAT</strong>
               <span>From $59.89</span>
             </div>
           </li>
           <li className="policy-item">
             <i className="bi bi-headset"></i>
             <div className="policy-texts">
-              <strong>SUPPORT 24/7</strong>
-              <span>Online 24 hours</span>
+              <strong>7/24 DESTEK</strong>
+              <span>Online 24 saat</span>
             </div>
           </li>
           <li className="policy-item">
             <i className="bi bi-arrow-clockwise"></i>
             <div className="policy-texts">
-              <strong> 30 DAYS RETURN</strong>
-              <span>Simply return it within 30 days</span>
+              <strong>İADE GARANTİLİ</strong>
+              <span>30 gün içinde iade edebilirsiniz</span>
             </div>
           </li>
           <li className="policy-item">
             <i className="bi bi-credit-card"></i>
             <div className="policy-texts">
-              <strong> PAYMENT METHOD</strong>
-              <span>Secure Payment</span>
+              <strong>ÖDEME YÖNTEMİ</strong>
+              <span>Güvenli Ödeme</span>
             </div>
           </li>
         </ul>

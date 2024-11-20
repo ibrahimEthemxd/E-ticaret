@@ -10,10 +10,10 @@ const BlogItem = () => {
           <span>25 Feb, 2021 </span>-<span>0 Comments</span>
         </div>
         <div className="blog-info-center">
-          <a href="#">Aliquam hendrerit mi metus</a>
+          <a href="#">Modern tasarımlar ve stil rehberleri</a>
         </div>
         <div className="blog-info-bottom">
-          <a href="#">Read More</a>
+          <a href="#">Daha Fazla</a>
         </div>
       </div>
     </li>

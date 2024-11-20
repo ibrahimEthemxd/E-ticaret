@@ -13,13 +13,15 @@ header {
     background-color: var(--primary-color);
     padding: 14px 0;
     text-align: center;
-    font-size: 12px;
+    font-size: 14px;
     color: white;
   }
   
   .global-notification a {
     color: white;
+    font-size: 12px;
     font-weight: 600;
+    margin-left: 3px;
   }
   
   .header-row {
@@ -203,6 +205,11 @@ header {
   
   .megamenu-wrapper .megamenu-menu-list a {
     font-size: 14px;
+  }
+
+  .megamenu-wrapper .megamenu-single-logo img{
+    width: 320px;
+    height: 300px;
   }
   
   .megamenu-wrapper .megamenu-single-title {

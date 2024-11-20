@@ -57,6 +57,7 @@ button:disabled {
   font-weight: 500;
   border: 1px solid black;
   transition: 0.2s ease all;
+  border-radius: 5px;
 }
 .btn-sm {
   line-height: 33px;

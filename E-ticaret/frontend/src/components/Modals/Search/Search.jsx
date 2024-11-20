@@ -5,19 +5,20 @@ const Search = ({ isSearchShow, setIsSearchShow }) => {
   return (
     <div className={`modal-search ${isSearchShow ? "show" : ""} `}>
       <div className="modal-wrapper">
-        <h3 className="modal-title">Search for products</h3>
+        <h3 className="modal-title">Popüler Aramalar
+        </h3>
         <p className="modal-text">
-          Start typing to see products you are looking for.
+          Aradığınız ürünü görmek için yazın.
         </p>
         <form className="search-form">
-          <input type="text" placeholder="Search a product" />
+          <input type="text" placeholder="Aradığınız ürün, kategori veya markayı yazınız" />
           <button>
             <i className="bi bi-search"></i>
           </button>
         </form>
         <div className="search-results">
           <div className="search-heading">
-            <h3>RESULTS FROM PRODUCT</h3>
+            <h3>İlgili Sonuçlar</h3>
           </div>
           <div className="results">
             <a href="#" className="result-item">

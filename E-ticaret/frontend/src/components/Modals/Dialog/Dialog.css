@@ -30,8 +30,8 @@
   
   .modal-dialog .modal-content .modal-close {
     position: absolute;
-    top: -40px;
-    right: -40px;
+    top: -5px;
+    right: 0px;
     background-color: transparent;
     font-size: 40px;
   }
@@ -80,7 +80,7 @@
     .modal-dialog .modal-content .modal-close {
       top: 0px;
       right: 0px;
-      font-size: 30px;
+      font-size: 25px;
     }
   
     .modal-dialog .modal-content .modal-image {

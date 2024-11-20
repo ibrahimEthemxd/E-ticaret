@@ -14,9 +14,10 @@ const Header = ({ setIsSearchShow }) => {
       <div className="global-notification">
         <div className="container">
           <p>
-            SUMMER SALE FOR ALL SWIM SUITS AND FREE EXPRESS INTERNATIONAL
-            DELIVERY - OFF 50%!
-            <a href="shop.html"> SHOP NOW</a>
+            Ethos’ta Süper Yaz Fırsatları! %40’a varan indirimler seni bekliyor.
+            <Link to={"/shop"}>
+              <a>HEMEN ALIŞVERİŞE BAŞLA</a>
+            </Link>
           </p>
         </div>
       </div>
@@ -28,7 +29,7 @@ const Header = ({ setIsSearchShow }) => {
             </div>
             <div className="header-left">
               <Link to={"/"} className="logo">
-                LOGO
+                ETHOS
               </Link>
             </div>
             <div className="header-center" id="sidebar">
@@ -39,7 +40,7 @@ const Header = ({ setIsSearchShow }) => {
                       to={"/"}
                       className={`menu-link ${pathname === "/" && "active"}`}
                     >
-                      Home
+                      ANA SAYFA
                       <i className="bi bi-chevron-down"></i>
                     </Link>
                     <div className="menu-dropdown-wrapper">
@@ -81,7 +82,7 @@ const Header = ({ setIsSearchShow }) => {
                         pathname === "/shop" && "active"
                       }`}
                     >
-                      Shop
+                      Ürünler
                       <i className="bi bi-chevron-down"></i>
                     </Link>
                     <div className="menu-dropdown-wrapper">
@@ -167,21 +168,24 @@ const Header = ({ setIsSearchShow }) => {
                           </div>
                         </div>
                         <div className="megamenu-single">
-                          <a href="#">
-                            <img src="/img/mega-menu.jpg" alt="" />
+                          <a href="" className="megamenu-single-logo">
+                            <img src="/img/logo/ethos_logo.png" alt="" />
                           </a>
                           <h3 className="megamenu-single-title">
-                            JOIN THE LAYERING GANG
+                            ALIŞVERİŞİN TADINI ÇIKAR
                           </h3>
                           <h4 className="megamenu-single-subtitle">
-                            Suspendisse faucibus nunc et pellentesque
+                            Modanın ve Kalitenin Buluşma Noktası
                           </h4>
-                          <a
-                            href="#"
-                            className="megamenu-single-button btn btn-sm"
-                          >
-                            Shop Now
-                          </a>
+                          <Link to={"/shop"}>
+                            {" "}
+                            <a
+                              href="#"
+                              className="megamenu-single-button btn btn-sm"
+                            >
+                              Shop Now
+                            </a>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -203,7 +207,7 @@ const Header = ({ setIsSearchShow }) => {
                         pathname === "/contact" && "active"
                       }`}
                     >
-                      Contact
+                      İLETİŞİM
                     </Link>
                   </li>
                 </ul>

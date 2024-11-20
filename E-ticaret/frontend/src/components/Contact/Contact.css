@@ -12,8 +12,9 @@
   }
   
   .contact-bottom .contact-titles h2 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
+    margin-top: 5px;
   }
   
   .contact-bottom .contact-titles p {

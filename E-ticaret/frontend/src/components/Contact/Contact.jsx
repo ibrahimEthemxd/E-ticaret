@@ -1,4 +1,4 @@
-import "./Contact.css"
+import "./Contact.css";
 
 const Contact = () => {
   return (
@@ -6,7 +6,7 @@ const Contact = () => {
       <div className="contact-top">
         <div className="contact-map">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.9633698339308!2d28.929441087738052!3d41.04793012296828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab1d021adf417%3A0xba3a3fdfdbb5f5d!2sEy%C3%BCp%20Sultan%20Camii!5e0!3m2!1str!2str!4v1665091191675!5m2!1str!2str"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3051.2951022594066!2d26.420781532711548!3d40.113426561298674!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14b1a82ca9b99cfd%3A0xf803b1ad12ea8904!2s%C3%87anakkale%20Onsekiz%20Mart%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1732105610577!5m2!1str!2str"
             width="100%"
             height="500"
             style={{
@@ -21,41 +21,41 @@ const Contact = () => {
       <div className="contact-bottom">
         <div className="container">
           <div className="contact-titles">
-            <h4>Contact with us</h4>
-            <h2>Get In Touch</h2>
+            <h4>Bizimle iletişime geçin</h4>
+            <h2>Sorularınız İçin Bize Ulaşın</h2>
             <p>
-              In hac habitasse platea dictumst. Pellentesque viverra sem nec
-              orci lacinia, in bibendum urna mollis. Quisque nunc lacus, varius
-              vel leo a, pretium lobortis metus. Vivamus consectetur consequat
-              justo.
+              Her türlü sorunuz ve geri bildiriminiz için buradayız.
+              İhtiyaçlarınıza çözüm sunmak için size yardımcı olmaktan mutluluk
+              duyarız. Hemen bizimle iletişime geçin ve size nasıl yardımcı
+              olabileceğimizi öğrenin!
             </p>
           </div>
           <div className="contact-elements">
             <form className="contact-form">
               <div className="">
                 <label>
-                  Your Name
+                  İsminiz
                   <span>*</span>
                 </label>
                 <input type="text" required />
               </div>
               <div className="">
                 <label>
-                  Your email
+                  Email
                   <span>*</span>
                 </label>
                 <input type="text" required />
               </div>
               <div className="">
                 <label>
-                  Subject
+                  Konu
                   <span>*</span>
                 </label>
                 <input type="text" required />
               </div>
               <div className="">
                 <label>
-                  Your message
+                  Mesajınız
                   <span>*</span>
                 </label>
                 <textarea
@@ -67,17 +67,18 @@ const Contact = () => {
                   required=""
                 ></textarea>
               </div>
-              <button className="btn btn-sm form-button">Send Message</button>
+              <button className="btn btn-sm form-button">Mesaj Gönder</button>
             </form>
             <div className="contact-info">
               <div className="contact-info-item">
                 <div className="contact-info-texts">
-                  <strong> Clotya Store</strong>
+                  <strong>Ethos Mağazası</strong>
                   <p className="contact-street">
-                    Çanakkale Turkey — 785 15h Street, Office 478/B Green
-                    Mall Berlin, De 81566
+                    Çanakkale Turkey — 785 15h Sokak, 17 BURDA AVM, De 81566
                   </p>
-                  <a href="tel:Phone: +90 530 220 6127">Phone: +90 530 220 6127</a>
+                  <a href="tel:Phone: +90 530 220 6127">
+                    Phone: +90 530 220 6127
+                  </a>
                   <a href="mailto:Email: contact@example.com">
                     Email: iethem6127@gmail.com
                   </a>
@@ -85,8 +86,8 @@ const Contact = () => {
               </div>
               <div className="contact-info-item">
                 <div className="contact-info-texts">
-                  <strong> Opening Hours</strong>
-                  <p className="contact-date">Monday - Friday : 9am - 5pm</p>
+                  <strong>Çalışma Saatlerimiz</strong>
+                  <p className="contact-date">Monday - Friday : 9am - 8pm</p>
                   <p>Weekend Closed</p>
                 </div>
               </div>
