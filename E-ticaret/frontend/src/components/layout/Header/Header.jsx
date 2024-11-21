@@ -15,9 +15,7 @@ const Header = ({ setIsSearchShow }) => {
         <div className="container">
           <p>
             Ethos’ta Süper Yaz Fırsatları! %40’a varan indirimler seni bekliyor.
-            <Link to={"/shop"}>
-              <a>HEMEN ALIŞVERİŞE BAŞLA</a>
-            </Link>
+            <Link to={"/shop"}>HEMEN ALIŞVERİŞE BAŞLA</Link>
           </p>
         </div>
       </div>
@@ -177,15 +175,7 @@ const Header = ({ setIsSearchShow }) => {
                           <h4 className="megamenu-single-subtitle">
                             Modanın ve Kalitenin Buluşma Noktası
                           </h4>
-                          <Link to={"/shop"}>
-                            {" "}
-                            <a
-                              href="#"
-                              className="megamenu-single-button btn btn-sm"
-                            >
-                              Shop Now
-                            </a>
-                          </Link>
+                          <Link to={"/shop"} className="btn btn-primary"> Shop Now</Link>
                         </div>
                       </div>
                     </div>

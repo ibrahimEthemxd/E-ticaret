@@ -10,7 +10,7 @@ const SliderItem = ({ imageSrc }) => {
         <p className="slider-title">YAZ 2024</p>
         <h2 className="slider-heading">Güneş Gözlükleri</h2>
         <a href="#" className="btn btn-lg btn-primary">
-          Explore Now
+          Şimdi Keşfet
         </a>
       </div>
     </div>

@@ -5,13 +5,13 @@ const Search = ({ isSearchShow, setIsSearchShow }) => {
   return (
     <div className={`modal-search ${isSearchShow ? "show" : ""} `}>
       <div className="modal-wrapper">
-        <h3 className="modal-title">Popüler Aramalar
-        </h3>
-        <p className="modal-text">
-          Aradığınız ürünü görmek için yazın.
-        </p>
+        <h3 className="modal-title">Popüler Aramalar</h3>
+        <p className="modal-text">Aradığınız ürünü görmek için yazın.</p>
         <form className="search-form">
-          <input type="text" placeholder="Aradığınız ürün, kategori veya markayı yazınız" />
+          <input
+            type="text"
+            placeholder="Aradığınız ürün, kategori veya markayı yazınız"
+          />
           <button>
             <i className="bi bi-search"></i>
           </button>
@@ -23,7 +23,7 @@ const Search = ({ isSearchShow, setIsSearchShow }) => {
           <div className="results">
             <a href="#" className="result-item">
               <img
-                src="img/products/product1/1.png"
+                src="/img/products/product1/1.png"
                 className="search-thumb"
                 alt=""
               />
@@ -35,7 +35,7 @@ const Search = ({ isSearchShow, setIsSearchShow }) => {
             </a>
             <a href="#" className="result-item">
               <img
-                src="img/products/product2/1.png"
+                src="/img/products/product2/1.png"
                 className="search-thumb"
                 alt=""
               />
@@ -53,6 +53,10 @@ const Search = ({ isSearchShow, setIsSearchShow }) => {
           onClick={() => setIsSearchShow(false)}
         ></i>
       </div>
+      <div
+        className="modal-overlay"
+        onClick={() => setIsSearchShow(false)}
+      ></div>
     </div>
   );
 };

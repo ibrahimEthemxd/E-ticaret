@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartProvider";
 import "./ProductItem.css";
 import { Link } from "react-router-dom";
-
+  
 const ProductItem = ({ productItem }) => {
   const { cartItems, addToCart } = useContext(CartContext);
 
