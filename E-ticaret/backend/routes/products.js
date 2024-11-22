@@ -6,4 +6,4 @@ router.get("/", async (req, res) => {
     res.send("Ürünler getirildi");
 })
 
-module.exports = router;
+module.exports = router; 
