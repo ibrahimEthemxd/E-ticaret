@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import Reviews from "../../Reviews/Reviews";
-import "./Tabs.css";e
+import "./Tabs.css";
 
 const Tabs = () => {
   const [activeTab, setActiveTab] = useState("desc");
