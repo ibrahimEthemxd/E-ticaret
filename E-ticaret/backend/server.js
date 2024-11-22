@@ -17,9 +17,8 @@ const connect = async () => {
     }
 }
 
-app.get("/", (req, res) => {
-    res.send("Hi");
-});
+//! middleware
+app.use(express.json());
 
 app.use("/api", mainRoute);
 
