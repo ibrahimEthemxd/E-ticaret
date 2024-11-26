@@ -6,7 +6,7 @@ import "./Reviews.css";
 const Reviews = ({ active }) => {
   return (
     <div className={`tab-panel-reviews ${active}`}>
-      <h3>2 reviews for Basic Colored Sweatpants With Elastic Hems</h3>
+      <h3>3 yorum Lastikli Paçalı Düz Renk Eşofman Altı için</h3>
       <div className="comments">
         <ol className="comment-list">
           <ReviewItem />
@@ -15,7 +15,7 @@ const Reviews = ({ active }) => {
         </ol>
       </div>
       <div className="review-form-wrapper">
-        <h2>Add a review</h2>
+        <h2>Yorum Yap</h2>
         <ReviewForm />
       </div>
     </div>

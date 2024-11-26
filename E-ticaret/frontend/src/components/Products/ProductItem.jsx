@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { CartContext } from "../../context/CartProvider";
 import "./ProductItem.css";
 import { Link } from "react-router-dom";
-  
+
 const ProductItem = ({ productItem }) => {
   const { cartItems, addToCart } = useContext(CartContext);
 
@@ -14,15 +14,15 @@ const ProductItem = ({ productItem }) => {
   return (
     <div className="product-item glide__slide glide__slide--active">
       <div className="product-image">
-        <a href="#">
+        <Link to={`product/${productItem.id}`} className="product-link">
           <img src={productItem.img.singleImage} alt="" className="img1" />
           <img src={productItem.img.thumbs[1]} alt="" className="img2" />
-        </a>
+        </Link>
       </div>
       <div className="product-info">
-        <a href="$" className="product-title">
+        <Link to={`product/${productItem.id}`} className="product-title">
           {productItem.name}
-        </a>
+        </Link>
         <ul className="product-star">
           <li>
             <i className="bi bi-star-fill"></i>
@@ -51,19 +51,28 @@ const ProductItem = ({ productItem }) => {
         <span className="product-discount">-{productItem.discount}%</span>
         <div className="product-links">
           <button
+            title="Sepete Ekle"
             className="add-to-cart"
             onClick={() => addToCart(productItem)}
             disabled={filteredCart}
           >
             <i className="bi bi-basket-fill"></i>
           </button>
-          <button>
+          <button title="Favorilere Ekle">
             <i className="bi bi-heart-fill"></i>
           </button>
-          <Link to={`product/${productItem.id}`} className="product-link">
+          <Link
+            to={`product/${productItem.id}`}
+            title="Ürünü İncele"
+            className="product-link"
+          >
             <i className="bi bi-eye-fill"></i>
           </Link>
-          <a href="#">
+          <a
+            href="https://iethem21.netlify.app/"
+            target="_blank"
+            title="Ürünü Paylaş"
+          >
             <i className="bi bi-share-fill"></i>
           </a>
         </div>

@@ -3,15 +3,16 @@ const CampaignItem = () => {
   return (
     <div className="campaign-item">
       <h3 className="campaign-title">
-        Fashion Month <br />
-        Ready in Capital <br />
-        Shop
+        Moda Ayı <br />
+        Çanakkalede Hazır <br />
+        Ethos
       </h3>
       <p className="campaign-desc">
-        Lorem ipsum dolor sit amet consectetur adipiscing elit dolor
+        En yeni trendlerle dolu koleksiyonları keşfedin. Şıklığı ve konforu bir
+        araya getiren tasarımlar sizin için hazır
       </p>
       <a href="#" className="btn btn-primary">
-        View All
+        Hepsini Gör
         <i className="bi bi-arrow-right"></i>
       </a>
     </div>

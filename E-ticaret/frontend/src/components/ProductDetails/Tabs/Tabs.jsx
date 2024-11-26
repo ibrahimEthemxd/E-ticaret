@@ -20,7 +20,7 @@ const Tabs = () => {
             className={`tab-button ${activeTab === "desc" ? "active" : ""}`}
             onClick={(e) => handleTabClick(e, "desc")}
           >
-            Description
+            Açıklama
           </a>
         </li>
         <li>
@@ -29,7 +29,7 @@ const Tabs = () => {
             className={`tab-button ${activeTab === "info" ? "active" : ""}`}
             onClick={(e) => handleTabClick(e, "info")}
           >
-            Additional information
+            Ek Bilgiler
           </a>
         </li>
         <li>
@@ -38,7 +38,7 @@ const Tabs = () => {
             className={`tab-button ${activeTab === "reviews" ? "active" : ""}`}
             onClick={(e) => handleTabClick(e, "reviews")}
           >
-            Reviews
+            Yorumlar
           </a>
         </li>
       </ul>
@@ -49,23 +49,16 @@ const Tabs = () => {
           }`}
         >
           <p>
-            Quisque varius diam vel metus mattis, id aliquam diam rhoncus. Proin
-            vitae magna in dui finibus malesuada et at nulla. Morbi elit ex,
-            viverra vitae ante vel, blandit feugiat ligula. Fusce fermentum
-            iaculis nibh, at sodales leo maximus a. Nullam ultricies sodales
-            nunc, in pellentesque lorem mattis quis. Cras imperdiet est in nunc
-            tristique lacinia. Nullam aliquam mauris eu accumsan tincidunt.
-            Suspendisse velit ex, aliquet vel ornare vel, dignissim a tortor.
+            Bu ürün, rahatlık ve şıklığı bir araya getirerek her ortamda
+            mükemmel bir kullanım sunar. <br /> Modern tasarımı ve kaliteli
+            malzemesi sayesinde hem günlük hem de özel günlerde ideal bir tercih
+            olacaktır.
           </p>
           <br />
           <p>
-            Quisque varius diam vel metus mattis, id aliquam diam rhoncus. Proin
-            vitae magna in dui finibus malesuada et at nulla. Morbi elit ex,
-            viverra vitae ante vel, blandit feugiat ligula. Fusce fermentum
-            iaculis nibh, at sodales leo maximus a. Nullam ultricies sodales
-            nunc, in pellentesque lorem mattis quis. Cras imperdiet est in nunc
-            tristique lacinia. Nullam aliquam mauris eu accumsan tincidunt.
-            Suspendisse velit ex, aliquet vel ornare vel, dignissim a tortor.
+            Yüksek kaliteli kumaştan üretilmiştir ve farklı beden seçenekleri
+            mevcuttur. <br /> Dayanıklı yapısı sayesinde uzun ömürlü kullanım
+            sağlar.
           </p>
         </div>
         <div
@@ -74,20 +67,20 @@ const Tabs = () => {
           }`}
           id="info"
         >
-          <h3>Additional information</h3>
+          <h3>Ek Bilgiler</h3>
           <table>
             <tbody>
               <tr>
-                <th>Color</th>
+                <th>Renk</th>
                 <td>
                   <p>
-                    Apple Red, Bio Blue, Sweet Orange, Blue, Green, Pink, Black,
-                    White
+                    Elma Kırmızısı, Biyo Mavi, Tatlı Turuncu, Mavi, Yeşil, Pembe,
+                    Siyah, Beyaz
                   </p>
                 </td>
               </tr>
               <tr>
-                <th>Size</th>
+                <th>Beden</th>
                 <td>
                   <p>XXS, XS, S, M, L, XL, XXL</p>
                 </td>
