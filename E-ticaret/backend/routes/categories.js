@@ -9,7 +9,6 @@ router.post("/", async (req, res) => {
         const newCategory = new Category({ name, img });
         await newCategory.save();
         res.status(201).send(newCategory);
-        console.log(name, img);
     } catch (error) {
         console.log(error);
     }
