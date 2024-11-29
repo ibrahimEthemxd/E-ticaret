@@ -33,3 +33,21 @@ router.get("/", async (req, res) => {
         res.status(500).json({ error: "Server error." });
     }
 });
+
+//? Belirli bir kuponu getirme (Read - Single by Coupon ID)
+router.get("/:couponId", async (req, res) => {
+    try {
+      const couponId = req.params.couponId;
+  
+      const coupon = await Coupon.findById(couponId);
+  
+      if (!coupon) {
+        return res.status(404).json({ error: "Coupon not found." });
+      }
+  
+      res.status(200).json(coupon);
+    } catch (error) {
+      console.log(error);
+      res.status(500).json({ error: "Server error." });
+    }
+  });
