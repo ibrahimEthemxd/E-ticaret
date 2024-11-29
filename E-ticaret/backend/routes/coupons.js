@@ -4,20 +4,32 @@ const Coupon = require("../models/Coupon.js");
 
 //? Yeni bir kupon oluşturma (Create)
 router.post("/", async (req, res) => {
-  try {
-    const { code } = req.body;
-    const existingCoupon = await Coupon.findOne({ code });
+    try {
+        const { code } = req.body;
+        const existingCoupon = await Coupon.findOne({ code });
 
-    if (existingCoupon) {
-      return res.status(400).json({ error: "This coupon is alread exists." });
+        if (existingCoupon) {
+            return res.status(400).json({ error: "This coupon is alread exists." });
+        }
+
+        const newCoupon = new Coupon(req.body);
+        await newCoupon.save();
+
+        res.status(201).json(newCoupon);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ error: "Server error." });
     }
-    
-    const newCoupon = new Coupon(req.body);
-    await newCoupon.save();
+});
 
-    res.status(201).json(newCoupon);
-  } catch (error) {
-    console.log(error);
-    res.status(500).json({ error: "Server error." });
-  }
+//? Tüm kuponları getirme (Read - All)
+router.get("/", async (req, res) => {
+    try {
+        const coupons = await Coupon.find();
+
+        res.status(200).json(coupons);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ error: "Server error." });
+    }
 });
