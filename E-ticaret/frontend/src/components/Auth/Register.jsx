@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { message } from "antd";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [formData, setFromData] = useState({
@@ -7,21 +9,51 @@ const Register = () => {
     password: "",
   });
 
+  const navigate = useNavigate();
+
   const handleInputChance = (e) => {
     const { name, value } = e.target;
     setFromData({ ...formData, [name]: value });
   };
 
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch(`http://localhost:5000/api/auth/register`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        localStorage.setItem("user", JSON.stringify(data));
+        message.success("Kayıt İşlemi Başarılı");
+        navigate("/");
+      } else {
+        message.error("Kayıt İşlemi Başarısız.");
+      }
+    } catch (error) {
+      console.log(error, "Giriş Hatası");
+    }
+  };
+
   return (
     <div className="account-column">
       <h2>Kayıt Ol</h2>
-      <form>
+      <form onSubmit={handleRegister}>
         <div>
           <label>
             <span>
               Kullanıcı Adı <span className="required">*</span>
             </span>
-            <input type="text" onChange={handleInputChance} name="username" />
+            <input
+              type="text"
+              onChange={handleInputChance}
+              name="username"
+              required
+            />
           </label>
         </div>
         <div>
@@ -29,7 +61,12 @@ const Register = () => {
             <span>
               E-posta Adresi <span className="required">*</span>
             </span>
-            <input type="email" onChange={handleInputChance} name="email" />
+            <input
+              type="email"
+              onChange={handleInputChance}
+              name="email"
+              required
+            />
           </label>
         </div>
         <div>
@@ -41,6 +78,7 @@ const Register = () => {
               type="password"
               onChange={handleInputChance}
               name="password"
+              required
             />
           </label>
         </div>
