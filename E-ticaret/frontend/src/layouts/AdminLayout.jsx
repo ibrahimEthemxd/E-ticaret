@@ -11,8 +11,16 @@ import {
 } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 const { Sider, Header, Content } = Layout;
+
+const getUserRole = () => {
+  const user = JSON.parse(localStorage.getItem("user"));
+  return user ? user.role : null;
+};
+
 const AdminLayout = ({ children }) => {
   const navigate = useNavigate();
+  const userRole = getUserRole();
+
   const menuItems = [
     {
       key: "1",
@@ -120,49 +128,54 @@ const AdminLayout = ({ children }) => {
       },
     },
   ];
-  return (
-    <div className="admin-layout">
-      <Layout
-        style={{
-          minHeight: "100vh",
-        }}
-      >
-        <Sider width={200} theme="dark">
-          <Menu
-            mode="vertical"
-            style={{
-              height: "100%",
-            }}
-            items={menuItems}
-          />
-        </Sider>
-        <Layout>
-          <Header>
-            <div
+  if (userRole === "admin") {
+    return (
+      <div className="admin-layout">
+        <Layout
+          style={{
+            minHeight: "100vh",
+          }}
+        >
+          <Sider width={200} theme="dark">
+            <Menu
+              mode="vertical"
               style={{
-                display: "flex",
-                justifyContent: "space-between",
-                color: "white",
+                height: "100%",
               }}
-            >
-              <h2>Admin Paneli</h2>
-            </div>
-          </Header>
-          <Content>
-            <div
-              className="site-layout-background"
-              style={{
-                padding: "24px 50px",
-                minHeight: 360,
-              }}
-            >
-              {children}
-            </div>
-          </Content>
+              items={menuItems}
+            />
+          </Sider>
+          <Layout>
+            <Header>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  color: "white",
+                }}
+              >
+                <h2>Admin Paneli</h2>
+              </div>
+            </Header>
+            <Content>
+              <div
+                className="site-layout-background"
+                style={{
+                  padding: "24px 50px",
+                  minHeight: 360,
+                }}
+              >
+                {children}
+                Content
+              </div>
+            </Content>
+          </Layout>
         </Layout>
-      </Layout>
-    </div>
-  );
+      </div>
+    );
+  } else {
+    return (window.location.href = "/");
+  }
 };
 
 export default AdminLayout;
