@@ -136,7 +136,14 @@ const AdminLayout = ({ children }) => {
             minHeight: "100vh",
           }}
         >
-          <Sider width={200} theme="dark">
+          <Sider
+            width={200}
+            theme="dark"
+            style={{
+              position: "fixed",
+              Height: "100vh"
+            }}
+          >
             <Menu
               mode="vertical"
               style={{
@@ -145,7 +152,7 @@ const AdminLayout = ({ children }) => {
               items={menuItems}
             />
           </Sider>
-          <Layout>
+          <Layout style={{ marginLeft: 200 }}>
             <Header>
               <div
                 style={{
@@ -161,6 +168,7 @@ const AdminLayout = ({ children }) => {
               <div
                 className="site-layout-background"
                 style={{
+                  backgroundColor: "white",
                   padding: "24px 50px",
                   minHeight: 360,
                 }}
