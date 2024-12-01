@@ -175,7 +175,10 @@ const Header = ({ setIsSearchShow }) => {
                           <h4 className="megamenu-single-subtitle">
                             Modanın ve Kalitenin Buluşma Noktası
                           </h4>
-                          <Link to={"/shop"} className="btn btn-primary"> Shop Now</Link>
+                          <Link to={"/shop"} className="btn btn-primary">
+                            {" "}
+                            Shop Now
+                          </Link>
                         </div>
                       </div>
                     </div>
