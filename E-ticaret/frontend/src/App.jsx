@@ -29,7 +29,7 @@ function App() {
           <Route path="users" element={<UserPage />} />
           <Route path="categories" element={<CategoryPage />} />
           <Route
-            path="categories/update/:id"
+            path="categories/update/:id"  
             element={<UpdateCategoryPage />}
           />
         </Route>
