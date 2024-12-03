@@ -81,3 +81,47 @@ const ProductPage = () => {
       console.log("Silme hatası:", error);
     }
   };
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+      try {
+        const [categoriesResponse, productsResponse] = await Promise.all([
+          fetch(`${apiUrl}/api/categories`),
+          fetch(`${apiUrl}/api/products`),
+        ]);
+        if (!categoriesResponse.ok || !productsResponse.ok) {
+          message.error("Veri getirme başarısız.");
+        }
+        const [categoriesData, productsData] = await Promise.all([
+          categoriesResponse.json(),
+          productsResponse.json(),
+        ]);
+        const productsWithCategories = productsData.map((product) => {
+          const categoryId = product.category;
+          const category = categoriesData.find(
+            (item) => item._id === categoryId
+          );
+          return {
+            ...product,
+            categoryName: category ? category.name : "",
+          };
+        });
+        setDataSource(productsWithCategories);
+      } catch (error) {
+        console.log("Veri hatası:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, [apiUrl]);
+  return (
+    <Table
+      dataSource={dataSource}
+      columns={columns}
+      rowKey={(record) => record._id}
+      loading={loading}
+    />
+  );
+};
+export default ProductPage;
