@@ -50,8 +50,8 @@ const ProductPage = () => {
             Düzenle
           </Button>
           <Popconfirm
-            title="Kategoriyi Sil"
-            description="Kategoriyi silmek istediğinizden emin misiniz?"
+            title="Ürünü Sil"
+            description="Ürünü silmek istediğinizden emin misiniz?"
             okText="Yes"
             cancelText="No"
             onConfirm={() => deleteProduct(record._id)}
@@ -70,7 +70,7 @@ const ProductPage = () => {
         method: "DELETE",
       });
       if (response.ok) {
-        message.success("Kategori başarıyla silindi.");
+        message.success("Ürün başarıyla silindi.");
         setDataSource((prevProducts) => {
           return prevProducts.filter((product) => product._id !== productId);
         });
