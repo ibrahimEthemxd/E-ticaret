@@ -3,11 +3,14 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const UpdateCategoryPage = () => {
+
   const [loading, setLoading] = useState(false);
   const [form] = Form.useForm();
   const params = useParams();
   const categoryId = params.id;
+  
   const apiUrl = import.meta.env.VITE_API_BASE_URL;
+
   const onFinish = async (values) => {
     setLoading(true);
     try {
@@ -29,6 +32,7 @@ const UpdateCategoryPage = () => {
       setLoading(false);
     }
   };
+
   useEffect(() => {
     const fetchSingleCategory = async () => {
       setLoading(true);

@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 const CategoryPage = () => {
   const [dataSource, setDataSource] = useState([]);
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
   const apiUrl = import.meta.env.VITE_API_BASE_URL;
 
   const columns = [
@@ -17,7 +17,7 @@ const CategoryPage = () => {
       render: (imgSrc) => <img src={imgSrc} alt="Image" width={100} />,
     },
     {
-      title: "İsim",
+      title: "Kategori İsmi",
       dataIndex: "name",
       key: "name",
       render: (text) => <b>{text}</b>,
@@ -65,11 +65,13 @@ const CategoryPage = () => {
       setLoading(false);
     }
   }, [apiUrl]);
+
   const deleteCategory = async (categoryId) => {
     try {
       const response = await fetch(`${apiUrl}/api/categories/${categoryId}`, {
         method: "DELETE",
       });
+
       if (response.ok) {
         message.success("Kategori başarıyla silindi.");
         fetchCategories();
@@ -80,9 +82,11 @@ const CategoryPage = () => {
       console.log("Silme hatası:", error);
     }
   };
+
   useEffect(() => {
     fetchCategories();
   }, [fetchCategories]);
+
   return (
     <Table
       dataSource={dataSource}
