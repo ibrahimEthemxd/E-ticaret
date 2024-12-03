@@ -64,3 +64,20 @@ const ProductPage = () => {
       ),
     },
   ];
+  const deleteProduct = async (productId) => {
+    try {
+      const response = await fetch(`${apiUrl}/api/products/${productId}`, {
+        method: "DELETE",
+      });
+      if (response.ok) {
+        message.success("Kategori başarıyla silindi.");
+        setDataSource((prevProducts) => {
+          return prevProducts.filter((product) => product._id !== productId);
+        });
+      } else {
+        message.error("Silme işlemi başarısız.");
+      }
+    } catch (error) {
+      console.log("Silme hatası:", error);
+    }
+  };
