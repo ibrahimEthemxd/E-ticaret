@@ -1,0 +1,66 @@
+import { Button, Popconfirm, Space, Table, message } from "antd";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+const ProductPage = () => {
+  const [dataSource, setDataSource] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+  const apiUrl = import.meta.env.VITE_API_BASE_URL;
+  const columns = [
+    {
+      title: "Product Görseli",
+      dataIndex: "img",
+      key: "img",
+      render: (imgSrc) => <img src={imgSrc[0]} alt="Image" width={100} />,
+    },
+    {
+      title: "Name",
+      dataIndex: "name",
+      key: "name",
+      render: (text) => <b>{text}</b>,
+    },
+    {
+      title: "Kategori",
+      dataIndex: "categoryName",
+      key: "categoryName",
+      render: (text) => <span>{text}</span>,
+    },
+    {
+      title: "Fiyat",
+      dataIndex: "price",
+      key: "price",
+      render: (text) => <span>{text.current.toFixed(2)}</span>,
+    },
+    {
+      title: "İndirim",
+      dataIndex: "price",
+      key: "price",
+      render: (text) => <span>%{text.discount}</span>,
+    },
+    {
+      title: "Actions",
+      dataIndex: "actions",
+      key: "actions",
+      render: (_, record) => (
+        <Space>
+          <Button
+            type="primary"
+            onClick={() => navigate(`/admin/products/update/${record._id}`)}
+          >
+            Düzenle
+          </Button>
+          <Popconfirm
+            title="Kategoriyi Sil"
+            description="Kategoriyi silmek istediğinizden emin misiniz?"
+            okText="Yes"
+            cancelText="No"
+            onConfirm={() => deleteProduct(record._id)}
+          >
+            <Button type="primary" danger>
+              Delete
+            </Button>
+          </Popconfirm>
+        </Space>
+      ),
+    },
+  ];
