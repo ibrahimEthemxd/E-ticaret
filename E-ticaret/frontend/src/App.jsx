@@ -35,8 +35,8 @@ function App() {
             path="categories/update/:id"
             element={<UpdateCategoryPage />}
           />
+          <Route path="products/create" element={<CreateProductPage />} />
         </Route>
-        <Route path="products/create" element={<CreateProductPage />} />
       </Routes>
     </>
   );
