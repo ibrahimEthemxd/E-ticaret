@@ -57,7 +57,7 @@ const ProductPage = () => {
             onConfirm={() => deleteProduct(record._id)}
           >
             <Button type="primary" danger>
-              Delete
+              Sil
             </Button>
           </Popconfirm>
         </Space>

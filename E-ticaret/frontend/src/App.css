@@ -9,3 +9,8 @@
     line-height: 0.8;
     margin-bottom: 4px;
   }
+  .panel-list-separation{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+  }

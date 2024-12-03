@@ -79,48 +79,50 @@ const CreateProductPage = () => {
         >
           <Input />
         </Form.Item>
-        <Form.Item
-          label="Ürün Kategorisi"
-          name="category"
-          rules={[
-            {
-              required: true,
-              message: "Lütfen 1 kategori seçin!",
-            },
-          ]}
-        >
-          <Select>
-            {categories.map((category) => (
-              <Select.Option value={category._id} key={category._id}>
-                {category.name}
-              </Select.Option>
-            ))}
-          </Select>
-        </Form.Item>
-        <Form.Item
-          label="Fiyat"
-          name="current"
-          rules={[
-            {
-              required: true,
-              message: "Lütfen ürün fiyatını girin!",
-            },
-          ]}
-        >
-          <InputNumber />
-        </Form.Item>
-        <Form.Item
-          label="İndirim Oranı"
-          name="discount"
-          rules={[
-            {
-              required: true,
-              message: "Lütfen bir ürün indirim oranı girin!",
-            },
-          ]}
-        >
-          <InputNumber />
-        </Form.Item>
+        <div className="panel-list-separation">
+          <Form.Item
+            label="Ürün Kategorisi"
+            name="category"
+            rules={[
+              {
+                required: true,
+                message: "Lütfen 1 kategori seçin!",
+              },
+            ]}
+          >
+            <Select>
+              {categories.map((category) => (
+                <Select.Option value={category._id} key={category._id}>
+                  {category.name}
+                </Select.Option>
+              ))}
+            </Select>
+          </Form.Item>
+          <Form.Item
+            label="Fiyat"
+            name="current"
+            rules={[
+              {
+                required: true,
+                message: "Lütfen ürün fiyatını girin!",
+              },
+            ]}
+          >
+            <InputNumber />
+          </Form.Item>
+          <Form.Item
+            label="İndirim Oranı"
+            name="discount"
+            rules={[
+              {
+                required: true,
+                message: "Lütfen bir ürün indirim oranı girin!",
+              },
+            ]}
+          >
+            <InputNumber />
+          </Form.Item>
+        </div>
         <Form.Item
           label="Ürün Açıklaması"
           name="description"
@@ -150,39 +152,45 @@ const CreateProductPage = () => {
         >
           <Input.TextArea
             placeholder="Her bir görsel linkini yeni bir satıra yazın."
-            autoSize={{ minRows: 4 }}
+            autoSize={{ minRows: 3 }}
           />
         </Form.Item>
-        <Form.Item
-          label="Ürün Renkleri (RGB Kodları)"
-          name="colors"
-          rules={[
-            {
-              required: true,
-              message: "Lütfen en az 1 ürün rengi girin!",
-            },
-          ]}
-        >
-          <Input.TextArea
-            placeholder="Her bir RGB kodunu yeni bir satıra yazın."
-            autoSize={{ minRows: 4 }}
-          />
-        </Form.Item>
-        <Form.Item
-          label="Ürün Bedenleri"
-          name="sizes"
-          rules={[
-            {
-              required: true,
-              message: "Lütfen en az 1 ürün beden ölçüsü girin!",
-            },
-          ]}
-        >
-          <Input.TextArea
-            placeholder="Her bir beden ölçüsünü yeni bir satıra yazın."
-            autoSize={{ minRows: 4 }}
-          />
-        </Form.Item>
+        <div className="panel-list-separation">
+          <div style={{ width: "23%" }}>
+            <Form.Item
+              label="Ürün Renkleri (RGB Kodları)"
+              name="colors"
+              rules={[
+                {
+                  required: true,
+                  message: "Lütfen en az 1 ürün rengi girin!",
+                },
+              ]}
+            >
+              <Input.TextArea
+                placeholder="Her bir RGB kodunu yeni bir satıra yazın."
+                autoSize={{ minRows: 3 }}
+              />
+            </Form.Item>
+          </div>
+          <div style={{ width: "23%" }}>
+            <Form.Item
+              label="Ürün Bedenleri"
+              name="sizes"
+              rules={[
+                {
+                  required: true,
+                  message: "Lütfen en az 1 ürün beden ölçüsü girin!",
+                },
+              ]}
+            >
+              <Input.TextArea
+                placeholder="Her bir beden ölçüsünü yeni bir satıra yazın."
+                autoSize={{ minRows: 3 }}
+              />
+            </Form.Item>
+          </div>
+        </div>
 
         {
           <Button type="primary" htmlType="submit">
