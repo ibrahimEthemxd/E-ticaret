@@ -203,7 +203,7 @@ const UpdateProductPage = () => {
           />
         </Form.Item>
         <Button type="primary" htmlType="submit">
-          Update
+          Güncelle
         </Button>
       </Form>
     </Spin>
