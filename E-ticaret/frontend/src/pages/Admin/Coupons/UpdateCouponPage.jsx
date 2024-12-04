@@ -1,16 +1,19 @@
-import { Button, Form, Input, Spin, message } from "antd";
+import { Button, Form, Input, InputNumber, Spin, message } from "antd";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-const UpdateCategoryPage = () => {
+const UpdateCouponPage = () => {
   const [loading, setLoading] = useState(false);
   const [form] = Form.useForm();
+
   const params = useParams();
-  const categoryId = params.id;
+  const couponId = params.id;
+
   const apiUrl = import.meta.env.VITE_API_BASE_URL;
+
   const onFinish = async (values) => {
     setLoading(true);
     try {
-      const response = await fetch(`${apiUrl}/api/categories/${categoryId}`, {
+      const response = await fetch(`${apiUrl}/api/coupons/${couponId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -18,12 +21,12 @@ const UpdateCategoryPage = () => {
         body: JSON.stringify(values),
       });
       if (response.ok) {
-        message.success("Kategori başarıyla güncellendi.");
+        message.success("Kupon başarıyla güncellendi.");
       } else {
-        message.error("Kategori güncellenirken bir hata oluştu.");
+        message.error("Kupon güncellenirken bir hata oluştu.");
       }
     } catch (error) {
-      console.log("Kategori güncelleme hatası:", error);
+      console.log("Kupon güncelleme hatası:", error);
     } finally {
       setLoading(false);
     }
@@ -32,15 +35,15 @@ const UpdateCategoryPage = () => {
     const fetchSingleCategory = async () => {
       setLoading(true);
       try {
-        const response = await fetch(`${apiUrl}/api/categories/${categoryId}`);
+        const response = await fetch(`${apiUrl}/api/coupons/${couponId}`);
         if (!response.ok) {
           throw new Error("Verileri getirme hatası");
         }
         const data = await response.json();
         if (data) {
           form.setFieldsValue({
-            name: data.name,
-            img: data.img,
+            code: data.code,
+            discountPercent: data.discountPercent,
           });
         }
       } catch (error) {
@@ -50,7 +53,7 @@ const UpdateCategoryPage = () => {
       }
     };
     fetchSingleCategory();
-  }, [apiUrl, categoryId, form]);
+  }, [apiUrl, couponId, form]);
   return (
     <Spin spinning={loading}>
       <Form
@@ -61,28 +64,28 @@ const UpdateCategoryPage = () => {
         onFinish={onFinish}
       >
         <Form.Item
-          label="Kategori İsmi"
-          name="name"
+          label="Kupon İsmi"
+          name="code"
           rules={[
             {
               required: true,
-              message: "Lütfen kategori adını girin!",
+              message: "Lütfen bir kupon kodu girin!",
             },
           ]}
         >
           <Input />
         </Form.Item>
         <Form.Item
-          label="Kategori Görseli (Link)"
-          name="img"
+          label="Kupon İndirim Oranı"
+          name="discountPercent"
           rules={[
             {
               required: true,
-              message: "Lütfen kategori görsel linkini girin!",
+              message: "Lütfen bir kupon indirim oranı girin!",
             },
           ]}
         >
-          <Input />
+          <InputNumber />
         </Form.Item>
         <Button type="primary" htmlType="submit">
           Güncelle
@@ -91,4 +94,4 @@ const UpdateCategoryPage = () => {
     </Spin>
   );
 };
-export default UpdateCategoryPage;
+export default UpdateCouponPage;
