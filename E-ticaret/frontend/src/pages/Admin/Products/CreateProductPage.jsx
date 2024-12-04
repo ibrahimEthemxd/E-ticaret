@@ -146,7 +146,7 @@ const CreateProductPage = () => {
           rules={[
             {
               required: true,
-              message: "Lütfen en az 4 ürün görsel linki girin!",
+              message: "Lütfen en az 1 ürün görsel linki girin!",
             },
           ]}
         >

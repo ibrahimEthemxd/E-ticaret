@@ -46,7 +46,7 @@ const CouponPage = () => {
       ),
     },
   ];
-  const fetchCategories = useCallback(async () => {
+  const fetchCoupons = useCallback(async () => {
     setLoading(true);
     try {
       const response = await fetch(`${apiUrl}/api/coupons`);
@@ -62,6 +62,7 @@ const CouponPage = () => {
       setLoading(false);
     }
   }, [apiUrl]);
+
   const deleteCoupon = async (couponId) => {
     try {
       const response = await fetch(`${apiUrl}/api/coupons/${couponId}`, {
@@ -69,7 +70,7 @@ const CouponPage = () => {
       });
       if (response.ok) {
         message.success("Kupon başarıyla silindi.");
-        fetchCategories();
+        fetchCoupons();
       } else {
         message.error("Silme işlemi başarısız.");
       }
@@ -77,9 +78,12 @@ const CouponPage = () => {
       console.log("Silme hatası:", error);
     }
   };
+
   useEffect(() => {
-    fetchCategories();
-  }, [fetchCategories]);
+    fetchCoupons();
+  }, [fetchCoupons]);
+
+  
   return (
     <Table
       dataSource={dataSource}

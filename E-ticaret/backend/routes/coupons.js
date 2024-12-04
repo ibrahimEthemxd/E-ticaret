@@ -98,7 +98,7 @@ router.delete("/:couponId", async (req, res) => {
     try {
         const couponId = req.params.couponId;
 
-        const deletedCoupon = await Coupon.findByIdAndRemove(couponId);
+        const deletedCoupon = await Coupon.findOneAndDelete(couponId);
 
         if (!deletedCoupon) {
             return res.status(404).json({ error: "Coupon not found." });
