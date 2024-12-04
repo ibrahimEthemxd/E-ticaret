@@ -9,6 +9,7 @@ import ProductDetailsPage from "./pages/ProductDetailsPage";
 import BlogDetailsPage from "./pages/BlogDetailsPage";
 
 import "./App.css";
+
 import UserPage from "./pages/Admin/UserPage";
 import CategoryPage from "./pages/Admin/Categories/CategoryPage";
 import UpdateCategoryPage from "./pages/Admin/Categories/UpdateCategoryPage";
@@ -17,6 +18,8 @@ import ProductPage from "./pages/Admin/Products/ProductPage";
 import CreateProductPage from "./pages/Admin/Products/CreateProductPage";
 import UpdateProductPage from "./pages/Admin/Products/UpdateProductPage";
 import CouponPage from "./pages/Admin/Coupons/CouponPage";
+import CreateCouponPage from "./pages/Admin/Coupons/CreateCouponPage";
+
 
 
 function App() {
@@ -40,6 +43,7 @@ function App() {
           <Route path="products/create" element={<CreateProductPage />} />
           <Route path="products/update/:id" element={<UpdateProductPage />} />
           <Route path="coupons" element={<CouponPage />} />
+          <Route path="coupons/create" element={<CreateCouponPage />} />
         </Route>
       </Routes>
     </>
