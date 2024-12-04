@@ -32,8 +32,8 @@ const CouponPage = () => {
             Güncelle
           </Button>
           <Popconfirm
-            title="Kategoriyi Sil"
-            description="Kategoriyi silmek istediğinizden emin misiniz?"
+            title="Kuponu Sil"
+            description="Kuponu silmek istediğinizden emin misiniz?"
             okText="Yes"
             cancelText="No"
             onConfirm={() => deleteCoupon(record._id)}
@@ -68,7 +68,7 @@ const CouponPage = () => {
         method: "DELETE",
       });
       if (response.ok) {
-        message.success("Kategori başarıyla silindi.");
+        message.success("Kupon başarıyla silindi.");
         fetchCategories();
       } else {
         message.error("Silme işlemi başarısız.");
