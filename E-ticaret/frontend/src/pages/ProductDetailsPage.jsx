@@ -3,11 +3,10 @@ import ProductDetails from "../components/ProductDetails/ProductDetails";
 import { useParams } from "react-router-dom";
 
 const ProductDetailsPage = () => {
-
   const [singleProduct, setSingleProduct] = useState(null);
   const { id: productId } = useParams();
   const apiUrl = import.meta.env.VITE_API_BASE_URL;
-  
+
   useEffect(() => {
     const fetchSingleProduct = async () => {
       try {
@@ -23,11 +22,12 @@ const ProductDetailsPage = () => {
     };
     fetchSingleProduct();
   }, [apiUrl, productId]);
-  console.log(singleProduct);
+
   return singleProduct ? (
     <ProductDetails singleProduct={singleProduct} />
   ) : (
     <p>Ürün Yükleniyor</p>
   );
 };
+
 export default ProductDetailsPage;

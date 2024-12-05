@@ -17,7 +17,10 @@ const ProductDetails = ({ singleProduct, setSingleProduct }) => {
               <Info singleProduct={singleProduct} />
             </main>
           </div>
-          <Tabs singleProduct={singleProduct} setSingleProduct={setSingleProduct} />
+          <Tabs
+            singleProduct={singleProduct}
+            setSingleProduct={setSingleProduct}
+          />
         </div>
       </div>
     </section>
