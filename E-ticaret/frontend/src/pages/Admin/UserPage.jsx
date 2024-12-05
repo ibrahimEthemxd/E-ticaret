@@ -8,7 +8,7 @@ const UserPage = () => {
 
   const columns = [
     {
-      title: "Resim",
+      title: "Kullanıcı Profili",
       dataIndex: "avatar",
       key: "avatar",
       render: (imgSrc) => (

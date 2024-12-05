@@ -23,7 +23,7 @@ const CategoryPage = () => {
       render: (text) => <b>{text}</b>,
     },
     {
-      title: "Aksiyon",
+      title: "Aksiyonlar",
       dataIndex: "actions",
       key: "actions",
       render: (_, record) => (

@@ -8,37 +8,37 @@ const ProductPage = () => {
   const apiUrl = import.meta.env.VITE_API_BASE_URL;
   const columns = [
     {
-      title: "Product Görseli",
+      title: "Ürün Görseli",
       dataIndex: "img",
       key: "img",
       render: (imgSrc) => <img src={imgSrc[0]} alt="Image" width={100} />,
     },
     {
-      title: "Name",
+      title: "Ürün ismi",
       dataIndex: "name",
       key: "name",
       render: (text) => <b>{text}</b>,
     },
     {
-      title: "Kategori",
+      title: "Ürün Kategorisi",
       dataIndex: "categoryName",
       key: "categoryName",
       render: (text) => <span>{text}</span>,
     },
     {
-      title: "Fiyat",
+      title: "Ürün Fiyatı",
       dataIndex: "price",
       key: "price",
       render: (text) => <span>{text.current.toFixed(2)}</span>,
     },
     {
-      title: "İndirim",
+      title: "İndirim Oranı",
       dataIndex: "price",
       key: "price",
       render: (text) => <span>%{text.discount}</span>,
     },
     {
-      title: "Actions",
+      title: "Aksiyonlar",
       dataIndex: "actions",
       key: "actions",
       render: (_, record) => (
@@ -52,8 +52,8 @@ const ProductPage = () => {
           <Popconfirm
             title="Ürünü Sil"
             description="Ürünü silmek istediğinizden emin misiniz?"
-            okText="Yes"
-            cancelText="No"
+            okText="Evet"
+            cancelText="Hayır"
             onConfirm={() => deleteProduct(record._id)}
           >
             <Button type="primary" danger>

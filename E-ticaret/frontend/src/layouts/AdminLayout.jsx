@@ -124,7 +124,7 @@ const AdminLayout = ({ children }) => {
       icon: <RollbackOutlined />,
       label: "Ana Sayfaya Git",
       onClick: () => {
-        navigate(`/`);
+        window.location.href = "/";
       },
     },
   ];
@@ -141,7 +141,7 @@ const AdminLayout = ({ children }) => {
             theme="dark"
             style={{
               position: "fixed",
-              Height: "100vh"
+              Height: "100vh",
             }}
           >
             <Menu

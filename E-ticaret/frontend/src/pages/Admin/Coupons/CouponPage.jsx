@@ -20,7 +20,7 @@ const CouponPage = () => {
       render: (code) => <span>%{code}</span>,
     },
     {
-      title: "Actions",
+      title: "Aksiyonlar",
       dataIndex: "actions",
       key: "actions",
       render: (_, record) => (
@@ -29,13 +29,13 @@ const CouponPage = () => {
             type="primary"
             onClick={() => navigate(`/admin/coupons/update/${record._id}`)}
           >
-            Güncelle
+            Düzenle
           </Button>
           <Popconfirm
             title="Kuponu Sil"
             description="Kuponu silmek istediğinizden emin misiniz?"
-            okText="Yes"
-            cancelText="No"
+            okText="Evet"
+            cancelText="Hayır"
             onConfirm={() => deleteCoupon(record._id)}
           >
             <Button type="primary" danger>
@@ -83,7 +83,6 @@ const CouponPage = () => {
     fetchCoupons();
   }, [fetchCoupons]);
 
-  
   return (
     <Table
       dataSource={dataSource}
