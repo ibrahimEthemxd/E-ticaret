@@ -10,10 +10,10 @@ const CartTable = () => {
         <tr>
           <th className="product-thumbnail">&nbsp;</th>
           <th className="product-thumbnail">&nbsp;</th>
-          <th className="product-name">Ürün</th>
-          <th className="product-price">Fiyatı</th>
-          <th className="product-quantity">Quantity</th>
-          <th className="product-subtotal">Subtotal</th>
+          <th className="product-name">Ürün Adı</th>
+          <th className="product-price">Ürün Fiyatı</th>
+          <th className="product-quantity">Ürün Adeti</th>
+          <th className="product-subtotal">Toplam Tutar</th>
         </tr>
       </thead>
       <tbody className="cart-wrapper">
