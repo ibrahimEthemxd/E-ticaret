@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Reviews from "../../Reviews/Reviews";
 import "./Tabs.css";
 
-const Tabs = () => {
+const Tabs = ({ singleProduct }) => {
   const [activeTab, setActiveTab] = useState("desc");
 
   const handleTabClick = (e, tab) => {
@@ -48,18 +48,10 @@ const Tabs = () => {
             activeTab === "desc" ? "active" : ""
           }`}
         >
-          <p>
-            Bu ürün, rahatlık ve şıklığı bir araya getirerek her ortamda
-            mükemmel bir kullanım sunar. <br /> Modern tasarımı ve kaliteli
-            malzemesi sayesinde hem günlük hem de özel günlerde ideal bir tercih
-            olacaktır.
-          </p>
-          <br />
-          <p>
-            Yüksek kaliteli kumaştan üretilmiştir ve farklı beden seçenekleri
-            mevcuttur. <br /> Dayanıklı yapısı sayesinde uzun ömürlü kullanım
-            sağlar.
-          </p>
+          <div
+            className="product-description"
+            dangerouslySetInnerHTML={{ __html: singleProduct.description }}
+          ></div>
         </div>
         <div
           className={`tab-panel-information content ${
@@ -74,15 +66,22 @@ const Tabs = () => {
                 <th>Renk</th>
                 <td>
                   <p>
-                    Elma Kırmızısı, Biyo Mavi, Tatlı Turuncu, Mavi, Yeşil, Pembe,
-                    Siyah, Beyaz
+                    Elma Kırmızısı, Biyo Mavi, Tatlı Turuncu, Mavi, Yeşil,
+                    Pembe, Siyah, Beyaz
                   </p>
                 </td>
               </tr>
               <tr>
                 <th>Beden</th>
                 <td>
-                  <p>XXS, XS, S, M, L, XL, XXL</p>
+                  <p>
+                    {singleProduct.sizes.map((item, index) => (
+                      <span key={index}>
+                        {item.toUpperCase()}
+                        {index < singleProduct.sizes.length - 1 && ", "}
+                      </span>
+                    ))}
+                  </p>
                 </td>
               </tr>
             </tbody>
@@ -90,6 +89,7 @@ const Tabs = () => {
         </div>
         <Reviews
           active={activeTab === "reviews" ? "content active" : "content"}
+          singleProduct={singleProduct}
         />
       </div>
     </div>
@@ -100,5 +100,4 @@ export default Tabs;
 
 Tabs.propTypes = {
   singleProduct: PropTypes.object,
-  setSingleProduct: PropTypes.func,
 };
