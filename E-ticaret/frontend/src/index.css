@@ -136,3 +136,15 @@ input[type="number"]::-webkit-inner-spin-button {
 .slick-list {
   margin: 0 -10px;
 }
+
+.cart-no-product{
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-no-product button{
+    font-size: 25px;
+    width: 250px;
+    height: 60px;
+}
