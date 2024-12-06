@@ -2,7 +2,7 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import { message } from "antd";
 
-const ReviewForm = ({ singleProduct }) => {
+const ReviewForm = ({ singleProduct, setSingleProduct }) => {
   const [rating, setRating] = useState(0);
   const [review, setReview] = useState("");
 
@@ -41,7 +41,7 @@ const ReviewForm = ({ singleProduct }) => {
         return;
       }
       const data = await res.json();
-      console.log(data);
+      setSingleProduct(data);
       setReview("");
       setRating(0);
       message.success("Yorum başarıyla eklendi.");
@@ -141,4 +141,5 @@ export default ReviewForm;
 
 ReviewForm.propTypes = {
   singleProduct: PropTypes.object,
+  setSingleProduct: PropTypes.func,
 };

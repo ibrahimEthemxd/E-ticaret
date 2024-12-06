@@ -11,9 +11,11 @@ const ProductDetailsPage = () => {
     const fetchSingleProduct = async () => {
       try {
         const response = await fetch(`${apiUrl}/api/products/${productId}`);
+
         if (!response.ok) {
           throw new Error("Verileri getirme hatası");
         }
+
         const data = await response.json();
         setSingleProduct(data);
       } catch (error) {
@@ -24,7 +26,10 @@ const ProductDetailsPage = () => {
   }, [apiUrl, productId]);
 
   return singleProduct ? (
-    <ProductDetails singleProduct={singleProduct} />
+    <ProductDetails
+      singleProduct={singleProduct}
+      setSingleProduct={setSingleProduct}
+    />
   ) : (
     <p>Ürün Yükleniyor</p>
   );
