@@ -85,6 +85,7 @@ router.delete("/:productId", async (req, res) => {
 });
 
 //? Ürünleri isme göre ara
+
 router.get("/search/:productName", async (req, res) => {
     try {
         const productName = req.params.productName;
@@ -98,5 +99,6 @@ router.get("/search/:productName", async (req, res) => {
         res.status(500).json({ error: "Server error." });
     }
 });
+
 
 module.exports = router; 
