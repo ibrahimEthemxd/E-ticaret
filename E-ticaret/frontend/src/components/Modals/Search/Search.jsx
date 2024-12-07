@@ -1,7 +1,27 @@
+import { message } from "antd";
 import "./Search.css";
 import PropTypes from "prop-types";
 
 const Search = ({ isSearchShow, setIsSearchShow }) => {
+  const apiUrl = import.meta.env.VITE_API_BASE_URL;
+
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    const productName = e.target[0].value;
+
+    try {
+      const res = await fetch(`${apiUrl}/api/products/search/${productName}`);
+      if (!res.ok) {
+        message.warning("Ürün getirme hatası");
+        return;
+      }
+      const data = await res.json();
+      setSearchProducts(data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className={`modal-search ${isSearchShow ? "show" : ""} `}>
       <div className="modal-wrapper">
