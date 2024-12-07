@@ -18,14 +18,12 @@ const connect = async () => {
         throw error;
     }
 }
-
 //! middlewares
 app.use(logger('dev'));
 app.use(express.json());
 app.use(cors());
 
 app.use("/api", mainRoute);
-
 
 app.listen(5000, () => {
     connect();
