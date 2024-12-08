@@ -33,16 +33,13 @@ const CartCoupon = () => {
         <input
           type="text"
           className="input-text"
-          placeholder="Coupon code"
+          placeholder="Kupon kodu"
           onChange={(e) => setCouponCode(e.target.value)}
           value={couponCode}
         />
         <button className="btn" type="button" onClick={applyCoupon}>
-          Apply Coupon
+          Kuponu Uygula
         </button>
-      </div>
-      <div className="update-cart">
-        <button className="btn">Sepeti Güncelle</button>
       </div>
     </div>
   );

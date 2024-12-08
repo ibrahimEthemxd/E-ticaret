@@ -59,6 +59,9 @@ button:disabled {
   transition: 0.2s ease all;
   border-radius: 5px;
 }
+.btn:active{
+  transform: scale(0.96);
+}
 .btn-sm {
   line-height: 33px;
 }
