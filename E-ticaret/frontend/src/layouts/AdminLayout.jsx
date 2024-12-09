@@ -146,6 +146,21 @@ const AdminLayout = ({ children }) => {
       }
     }
   };
+  const getPageTitle = () => {
+    for (const item of menuItems) {
+      if (item.children) {
+        for (const child of item.children) {
+          if (child.path === window.location.pathname) {
+            return child.label;
+          }
+        }
+      } else {
+        if (item.path === window.location.pathname) {
+          return item.label;
+        }
+      }
+    }
+  };
 
   if (userRole === "admin") {
     return (
@@ -181,6 +196,7 @@ const AdminLayout = ({ children }) => {
                   color: "white",
                 }}
               >
+                <h2>{getPageTitle()}</h2>
                 <h2>Admin Paneli</h2>
               </div>
             </Header>
