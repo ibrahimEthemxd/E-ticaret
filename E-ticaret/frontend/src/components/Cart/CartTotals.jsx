@@ -1,8 +1,7 @@
 import { useContext, useState } from "react";
 import { loadStripe } from "@stripe/stripe-js";
 import { CartContext } from "../../context/CartProvider";
-import { message } from "antd";
-import { Spin, message } from "antd";
+import { message, Spin } from "antd";
 
 const CartTotals = () => {
   const [fastCargoChecked, setFastCargoChecked] = useState(false);
